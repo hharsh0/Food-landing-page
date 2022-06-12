@@ -81,7 +81,7 @@ function App() {
                 component="div"
                 sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
               >
-                Search your Fav recipes
+                Bite my kitchen
               </Typography>
               <Search>
                 <SearchIconWrapper>
