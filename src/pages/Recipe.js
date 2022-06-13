@@ -6,14 +6,10 @@ import Checkbox from "@mui/material/Checkbox";
 import FavoriteBorder from "@mui/icons-material/FavoriteBorder";
 import Favorite from "@mui/icons-material/Favorite";
 
-function Recipe() {
-  const [data, setData] = useState()
-
-  const apiKey = "97902961a0e8412d960059702c903f3e";
-
+function Recipe({ apiKey }) {
+  const [data, setData] = useState();
   const params = useParams();
-  const id = params.id
-  console.log(id);
+  const id = params.id;
 
   useEffect(() => {
     fetch(
@@ -25,9 +21,7 @@ function Recipe() {
         setData(data);
         console.log(data.image);
       });
-  }, [])
-
-
+  }, []);
 
   return (
     <>
@@ -157,7 +151,9 @@ function Recipe() {
                   </span>
 
                   <div className="flex ml-auto border-0 py-2 px-6 ">
-                    <Button variant="contained">Source</Button>
+                    <Button variant="contained">
+                      <a href={data.spoonacularSourceUrl}>Source</a>
+                    </Button>
                   </div>
                   <button className="rounded-full w-10 h-10  p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-4">
                     <Checkbox
