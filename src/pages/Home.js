@@ -11,7 +11,7 @@ function Home() {
 
    useEffect(() => {
      fetch(
-       `https://api.spoonacular.com/recipes/random?apiKey=${apiKey}&number=${numberOfImages}&tags=vegetarian,dessert`
+       `https://api.spoonacular.com/recipes/random?apiKey=${apiKey}&number=${numberOfImages}&tags=vegetarian`
      )
        .then((response) => response.json())
        .then((data) => {
